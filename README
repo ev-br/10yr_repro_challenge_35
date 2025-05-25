@@ -26,6 +26,23 @@ $ ../merge < an_XXX
 where `merge` is the result of compilation of `merge.f` at the top level.
 )
 
+--------------
+
+**EDITED** 25.05.2025, in response to the review:
+
+1. Once compiled, to run the code you need two input files: `infile` and a parameter file; the name of a parameter file starts with `par_`.
+See below and https://github.com/ReScience/submissions/issues/42#issuecomment-2855297291 for details
+
+2. The historic part of this file, below, contains a statement that output files for a run with `par_tst` should agree with `nmnm_tst.dat` and `ct3d_sts.dat`.
+*This statement is too optimistic*: there should be no expectation that speficic numeric values match exactly.
+A reasonable expectation is that, when plotted
+- `nmnm_tst.dat` displays a roughly bell shape, and asymptortically converges to a Gaussian
+- `ct3d_tst.dat` should converge to _some_ smooth function with a jump discontinuity at zero imaginary time
+See https://github.com/ReScience/submissions/issues/42#issuecomment-2867365120 for a longer discussion.
+
+--------------
+
+
 The rest of this file is the README from 2006, verbatim.
 
 
